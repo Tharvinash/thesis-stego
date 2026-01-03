@@ -65,6 +65,26 @@ python stego_metrics_ui.py
 
 Select the reference (cover) and stego images, then Compute to see SSIM/PSNR.
 
+### 5) CLI: Bits-per-pixel (BPP) estimator
+
+Estimate message fit and BPP usage for a cover image:
+
+```powershell
+python stego_bpp.py --image cover.png --text "secret message"
+```
+
+Shows image resolution, capacity (assuming 1 LSB per RGB channel), payload bits, total bits (payload + 32-bit header), and BPP.
+
+### 6) GUI: Bits-per-pixel (BPP) estimator
+
+Launch the BPP UI:
+
+```powershell
+python stego_bpp_ui.py
+```
+
+Pick a cover image, enter the secret text, and Compute to see capacity, payload bits, total bits, BPP, and whether it fits.
+
 ## Notes and tips
 
 - Use lossless formats (PNG/BMP) for embedding; JPEG may degrade hidden data.
